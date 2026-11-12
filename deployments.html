@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1b373b"><meta name="description" content="Service Office — сопровождение программных продуктов">
+<title>Внедрения · Service Office</title><link rel="stylesheet" href="style.css"></head>
+<body data-view="deployments">
+<header class="sitehead"><div class="sitehead-row"><a href="index.html" class="brand" aria-label="Service Office, главная"><span class="brand-symbol">S/O</span><span><span class="brand-name">Service Office</span><span class="brand-sub">Учёт / Внедрение / Поддержка</span></span></a>
+<div class="headmeta"><div><span class="meta-label">РАБОЧАЯ СРЕДА</span>Учебный стенд / 2026</div><div><span class="meta-label">АКТУАЛЬНЫЙ ВЫПУСК</span><strong id="latestVersion">v1.1.0</strong></div><button class="modebutton" type="button" id="themeButton">Тёмная тема</button></div></div>
+<nav class="navwrap" aria-label="Основные разделы"><a href="index.html" class="" >Обзор</a><a href="deployments.html" class="active" aria-current="page">Внедрения</a><a href="incidents.html" class="" >Инциденты</a><a href="maintenance.html" class="" >Изменения</a><a href="releases.html" class="" >Релизы</a></nav></header>
+<main class="page"><section class="pageheading"><div><div class="sup">01 / SERVICE OFFICE</div><h1>Внедрения</h1><p>Отслеживание подготовки заказчиков, обучение персонала и переход продуктов в эксплуатацию.</p></div><div class="mark" aria-hidden="true">02</div></section><div class="todayline"><span>СЛУЖБА СОПРОВОЖДЕНИЯ / <b>СТЕНД АЛИХАНА</b></span><span id="today"></span></div>
+
+<section class="section"><div class="section-head"><div><span class="section-number">01</span><h2>Реестр внедрений</h2><p>Ответственные, этапы и выполненные шаги.</p></div></div><div class="rows"><table class="data-table"><thead><tr><th>Заказчик / продукт</th><th>Ответственный</th><th>Этап</th><th>Плановая дата</th><th>Готовность</th><th>Действия</th></tr></thead><tbody id="deployTable"></tbody></table></div><div class="section-footer"><span id="deployCount">—</span></div></section>
+<div class="columns">
+<section class="section"><div class="section-head"><div><span class="section-number">02</span><h2>Новое внедрение</h2><p>Создайте запись в реестре.</p></div></div><div class="section-body"><form class="workform" id="deployForm">
+<div class="fields2"><label>Организация<input name="client" required maxlength="100" placeholder="Название заказчика"></label><label>Программный продукт<input name="product" required maxlength="100" placeholder="Что внедряем"></label></div>
+<div class="fields2"><label>Ответственный<input name="owner" required maxlength="70" placeholder="Фамилия и инициалы"></label><label>Версия продукта<input name="version" required value="v1.1.0" pattern="v[0-9]+\.[0-9]+\.[0-9]+"></label></div>
+<div class="fields2"><label>Этап<select name="stage"><option value="planning">Планирование</option><option value="setup">Настройка</option><option value="training">Обучение</option><option value="production">Запуск</option></select></label><label>Плановая дата<input type="date" name="plannedDate" required value="2026-11-30"></label></div>
+<div class="fields2"><label>Выполнено шагов<input type="number" name="done" min="0" value="0" required></label><label>Всего шагов<input type="number" name="total" min="1" value="5" required></label></div><span class="form-error" id="deployError" role="alert"></span><div class="formactions"><span class="formhint">Запись сохранится в текущем браузере.</span><button class="button-primary" type="submit">Добавить внедрение</button></div>
+</form></div></section>
+<section class="section"><div class="section-head"><div><span class="section-number">03</span><h2>Порядок работы</h2><p>Переход от подготовки к запуску.</p></div></div><div class="section-body"><ol><li>Создайте запись и укажите заказчика.</li><li>Заполняйте готовность после выполнения задач.</li><li>Переводите этапы: планирование, настройка, обучение, запуск.</li><li>Проверяйте плановую дату и ответственного.</li></ol><div class="notice">Кнопки «Этап» и «+ шаг» меняют данные сразу и без обновления страницы.</div></div></section>
+</div>
+<footer class="foot"><span>Service Office · ТРПП · КС-2-24 · Алихан</span><span>Демонстрационная система. Данные хранятся только в этом браузере.</span></footer></main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js" defer></script></body></html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1b373b"><meta name="description" content="Service Office — сопровождение программных продуктов">
+<title>Обзор работы · Service Office</title><link rel="stylesheet" href="style.css"></head>
+<body data-view="dashboard">
+<header class="sitehead"><div class="sitehead-row"><a href="index.html" class="brand" aria-label="Service Office, главная"><span class="brand-symbol">S/O</span><span><span class="brand-name">Service Office</span><span class="brand-sub">Учёт / Внедрение / Поддержка</span></span></a>
+<div class="headmeta"><div><span class="meta-label">РАБОЧАЯ СРЕДА</span>Учебный стенд / 2026</div><div><span class="meta-label">АКТУАЛЬНЫЙ ВЫПУСК</span><strong id="latestVersion">v1.1.0</strong></div><button class="modebutton" type="button" id="themeButton">Тёмная тема</button></div></div>
+<nav class="navwrap" aria-label="Основные разделы"><a href="index.html" class="active" aria-current="page">Обзор</a><a href="deployments.html" class="" >Внедрения</a><a href="incidents.html" class="" >Инциденты</a><a href="maintenance.html" class="" >Изменения</a><a href="releases.html" class="" >Релизы</a></nav></header>
+<main class="page"><section class="pageheading"><div><div class="sup">00 / SERVICE OFFICE</div><h1>Обзор работы</h1><p>Состояние внедрений, сроков решения и запланированных изменений. Всё самое важное на одном экране.</p></div><div class="mark" aria-hidden="true">01</div></section><div class="todayline"><span>СЛУЖБА СОПРОВОЖДЕНИЯ / <b>СТЕНД АЛИХАНА</b></span><span id="today"></span></div>
+
+<section class="metric-strip"><div class="metric"><span class="metric-name">Внедрения в процессе</span><span class="metric-value" id="kpiDeploy">—</span><span class="metric-foot">Без завершённых запусков</span></div><div class="metric"><span class="metric-name">Открытые обращения</span><span class="metric-value red" id="kpiInc">—</span><span class="metric-foot">Просроченных: <b id="lateCount">—</b></span></div><div class="metric"><span class="metric-name">SLA выполнен</span><span class="metric-value" id="kpiSla">—</span><span class="metric-foot">По решённым обращениям</span></div><div class="metric"><span class="metric-name">Актуальная версия</span><span class="metric-value" id="kpiVersion">—</span><span class="metric-foot">Последняя запись в релизах</span></div></section>
+<div class="columns half">
+<section class="section"><div class="section-head"><div><span class="section-number">01</span><h2>Структура обращений</h2><p>Количество инцидентов по четырём уровням приоритета.</p></div></div><div class="chart-area"><canvas id="priorityChart" role="img" aria-label="Распределение инцидентов по приоритетам"></canvas><div class="chart-fallback">Chart.js недоступен. Для графиков нужен доступ к CDN.</div></div></section>
+<section class="section"><div class="section-head"><div><span class="section-number">02</span><h2>Заявки по видам</h2><p>Корректирующее, адаптивное, совершенствующее и профилактическое сопровождение.</p></div></div><div class="chart-area"><canvas id="typeChart" role="img" aria-label="Виды сопровождения"></canvas><div class="chart-fallback">Chart.js недоступен. Для графиков нужен доступ к CDN.</div></div></section>
+</div>
+<div class="columns half">
+<section class="section"><div class="section-head"><div><span class="section-number">03</span><h2>Последние обращения</h2><p>Недавние сообщения пользователей.</p></div></div><div class="section-body"><ul class="detail-list" id="miniInc"></ul></div><div class="section-footer"><a class="plain-link" href="incidents.html">Открыть журнал обращений</a></div></section>
+<section class="section"><div class="section-head"><div><span class="section-number">04</span><h2>Активные внедрения</h2><p>Готовность работ по учебным организациям.</p></div></div><div class="section-body"><ul class="detail-list" id="miniDep"></ul></div><div class="section-footer"><a class="plain-link" href="deployments.html">Перейти к внедрениям</a></div></section>
+</div>
+<footer class="foot"><span>Service Office · ТРПП · КС-2-24 · Алихан</span><span>Демонстрационная система. Данные хранятся только в этом браузере.</span></footer></main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="chart.umd.min.js" defer></script>
+<script src="app.js" defer></script></body></html>

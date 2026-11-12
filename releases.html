@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1b373b"><meta name="description" content="Service Office — сопровождение программных продуктов">
+<title>История выпусков · Service Office</title><link rel="stylesheet" href="style.css"></head>
+<body data-view="releases">
+<header class="sitehead"><div class="sitehead-row"><a href="index.html" class="brand" aria-label="Service Office, главная"><span class="brand-symbol">S/O</span><span><span class="brand-name">Service Office</span><span class="brand-sub">Учёт / Внедрение / Поддержка</span></span></a>
+<div class="headmeta"><div><span class="meta-label">РАБОЧАЯ СРЕДА</span>Учебный стенд / 2026</div><div><span class="meta-label">АКТУАЛЬНЫЙ ВЫПУСК</span><strong id="latestVersion">v1.1.0</strong></div><button class="modebutton" type="button" id="themeButton">Тёмная тема</button></div></div>
+<nav class="navwrap" aria-label="Основные разделы"><a href="index.html" class="" >Обзор</a><a href="deployments.html" class="" >Внедрения</a><a href="incidents.html" class="" >Инциденты</a><a href="maintenance.html" class="" >Изменения</a><a href="releases.html" class="active" aria-current="page">Релизы</a></nav></header>
+<main class="page"><section class="pageheading"><div><div class="sup">04 / SERVICE OFFICE</div><h1>История выпусков</h1><p>Зафиксированные версии продукта, сведения об изменениях и подготовка следующего релиза.</p></div><div class="mark" aria-hidden="true">05</div></section><div class="todayline"><span>СЛУЖБА СОПРОВОЖДЕНИЯ / <b>СТЕНД АЛИХАНА</b></span><span id="today"></span></div>
+
+<div class="columns">
+<section class="section"><div class="section-head"><div><span class="section-number">01</span><h2>Лента версий</h2><p>Новые версии располагаются первыми.</p></div></div><div class="section-body"><div class="release-line" id="releaseList"></div></div><div class="section-footer"><span id="releaseCount">—</span></div></section>
+<div>
+<section class="section"><div class="section-head"><div><span class="section-number">02</span><h2>Следующий выпуск</h2><p>Номер рассчитывается по правилам SemVer.</p></div></div><div class="section-body"><form class="workform" id="relForm"><label>Масштаб изменения<select name="level" id="releaseLevel"><option value="patch">Patch — исправления</option><option value="minor">Minor — новая функция</option><option value="major">Major — несовместимые изменения</option></select></label><div class="cover-box"><span class="minor-label">ПРЕДЛАГАЕМАЯ ВЕРСИЯ</span><b id="nextRelease">—</b><p>Версия меняется в зависимости от выбранного типа изменений.</p></div><label>Дата выхода<input type="date" id="relDate" name="date" required></label><label>Изменения (одно на строку)<textarea name="changes" rows="5" required placeholder="Исправлено...
+Добавлено..."></textarea></label><span class="form-error" id="relError" role="alert"></span><button class="button-primary" type="submit">Зафиксировать релиз</button></form></div></section>
+<section class="section"><div class="section-head"><div><span class="section-number">03</span><h2>Как устроена версия</h2><p>MAJOR.MINOR.PATCH</p></div></div><div class="section-body"><div class="notice">Patch — исправления, minor — новые совместимые функции, major — несовместимые изменения. Версии с историей хранятся в localStorage и доступны после перезагрузки.</div></div></section>
+</div></div>
+<footer class="foot"><span>Service Office · ТРПП · КС-2-24 · Алихан</span><span>Демонстрационная система. Данные хранятся только в этом браузере.</span></footer></main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js" defer></script></body></html>
